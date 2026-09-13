@@ -86,7 +86,7 @@ if l2:
     a2.set_xlabel("Ascon rounds per cycle"); a2.set_ylabel("encrypted records/s")
     a2.set_title("Real-time gain saturates", fontsize=8)
     for s in ("top", "right"): a2.spines[s].set_visible(False)
-    fig.tight_layout()
+    fig.tight_layout(w_pad=2.5)
     for e in ("pdf", "png"):
         fig.savefig(os.path.join(FIG, f"fig_frontier.{e}"), bbox_inches="tight", dpi=400)
     print("\nwrote results/figures/fig_frontier.pdf")
